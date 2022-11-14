@@ -1,4 +1,4 @@
-package com.clinistats.hepdesk.util;
+package com.clinistats.helpdesk.util;
 
 import java.io.File;
 import java.io.FileInputStream;

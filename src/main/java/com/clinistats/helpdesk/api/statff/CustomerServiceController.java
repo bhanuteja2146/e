@@ -45,9 +45,9 @@ import com.clinistats.helpdesk.s3.S3FileUpload;
 import com.clinistats.helpdesk.services.interfaces.CustomerServiceUseCase;
 import com.clinistats.helpdesk.services.interfaces.PortalMessageUseCase;
 import com.clinistats.helpdesk.services.interfaces.StaffUseCase;
-import com.clinistats.hepdesk.util.FileUtility;
-import com.clinistats.hepdesk.util.JwtTokenUtil;
-import com.clinistats.hepdesk.util.ResponseInterface;
+import com.clinistats.helpdesk.util.FileUtility;
+import com.clinistats.helpdesk.util.JwtTokenUtil;
+import com.clinistats.helpdesk.util.ResponseInterface;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import io.jsonwebtoken.ExpiredJwtException;

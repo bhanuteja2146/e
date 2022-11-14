@@ -39,8 +39,8 @@ import com.clinistats.helpdesk.response.GenericResponseList;
 import com.clinistats.helpdesk.response.GetStaffResponse;
 import com.clinistats.helpdesk.services.interfaces.StaffUseCase;
 import com.clinistats.helpdesk.services.interfaces.UserProfileUseCase;
-import com.clinistats.helpdesk.util.CommonUtil;
-import com.clinistats.helpdesk.util.JwtTokenUtil;
+import com.clinistats.hepdesk.util.CommonUtil;
+import com.clinistats.hepdesk.util.JwtTokenUtil;
 
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;

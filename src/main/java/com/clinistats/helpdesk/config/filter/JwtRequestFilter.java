@@ -21,8 +21,7 @@ import org.springframework.web.filter.OncePerRequestFilter;
 import com.clinistats.helpdesk.model.BlackListedTokens;
 import com.clinistats.helpdesk.services.impl.UserDetailsServiceImpl;
 import com.clinistats.helpdesk.services.interfaces.TokenService;
-import com.clinistats.helpdesk.util.JwtTokenUtil;
-
+import com.clinistats.hepdesk.util.JwtTokenUtil;
 import io.jsonwebtoken.ExpiredJwtException;
 
 @Component

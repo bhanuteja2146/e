@@ -42,9 +42,9 @@ import com.clinistats.helpdesk.services.interfaces.GetUserProfileUseCase;
 import com.clinistats.helpdesk.services.interfaces.ProvFacPermissionMappingUseCase;
 import com.clinistats.helpdesk.services.interfaces.TokenService;
 import com.clinistats.helpdesk.services.interfaces.UpdateUserProfileUseCase;
-import com.clinistats.helpdesk.util.AES;
-import com.clinistats.helpdesk.util.CommonUtil;
-import com.clinistats.helpdesk.util.JwtTokenUtil;
+import com.clinistats.hepdesk.util.AES;
+import com.clinistats.hepdesk.util.CommonUtil;
+import com.clinistats.hepdesk.util.JwtTokenUtil;
 
 @RestController
 @CrossOrigin

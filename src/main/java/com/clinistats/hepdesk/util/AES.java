@@ -1,4 +1,4 @@
-package com.clinistats.helpdesk.util;
+package com.clinistats.hepdesk.util;
 
 import java.nio.charset.StandardCharsets;
 import java.security.spec.KeySpec;

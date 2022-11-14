@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.clinistats.helpdesk.util;
+package com.clinistats.hepdesk.util;
 
 import com.clinistats.helpdesk.constatnts.ResponseStatus;
 import com.clinistats.helpdesk.constatnts.ResponseStatusConstants;

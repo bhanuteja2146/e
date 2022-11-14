@@ -37,7 +37,7 @@ import com.clinistats.helpdesk.response.GetFacilityResponse;
 import com.clinistats.helpdesk.response.GetIdName;
 import com.clinistats.helpdesk.response.GetIdNameDto;
 import com.clinistats.helpdesk.specification.FacilitySpecification;
-import com.clinistats.helpdesk.util.FileImageExtension;
+import com.clinistats.hepdesk.util.FileImageExtension;
 
 @Repository("facilityDaoImpl")
 class FacilityDaoImpl implements FacilityDao {

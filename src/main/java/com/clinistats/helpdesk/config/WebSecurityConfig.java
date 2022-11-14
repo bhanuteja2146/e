@@ -17,7 +17,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 import com.clinistats.helpdesk.config.filter.JwtRequestFilter;
 import com.clinistats.helpdesk.services.impl.UserDetailsServiceImpl;
 import com.clinistats.helpdesk.services.interfaces.TokenService;
-import com.clinistats.helpdesk.util.JwtTokenUtil;
+import com.clinistats.hepdesk.util.JwtTokenUtil;
 
 @Configuration
 @EnableWebSecurity

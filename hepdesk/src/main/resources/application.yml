@@ -31,7 +31,7 @@ server:
   servlet:    
      application-display-name: helpdesk
      context-path: /helpdesk
-    
+
 base.path: /opt/HelpSupport/
 aws.publicBucket:
   ehr-uploadattachments-dev

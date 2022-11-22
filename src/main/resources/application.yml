@@ -1,9 +1,13 @@
-
-server:
-  port: 9020
-
 spring:
   application:
       name: helpdesk-services
+  cloud:    
+    config:
+      uri: http://192.168.11.216:8888
+  profiles: 
+    active: dev
+server:
+  port: 9020     
+
 
     

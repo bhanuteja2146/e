@@ -1,7 +1,9 @@
 
 server:
-  port: 8080
-  servlet:    
-     application-display-name: helpdesk
-     context-path: /helpdesk
+  port: 9020
+
+spring:
+  application:
+      name: helpdesk-services
+
     

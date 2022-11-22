@@ -133,7 +133,7 @@ public class AuthenticationController {
 			if (!CollectionUtils.isEmpty(mappedFacilities)) {
 				String convertedString = commonUtils
 						.convertListToString(mappedFacilities.get(userProfile.getProviderId()));
-				if (convertedString != null && !convertedString.isBlank())
+				if (convertedString != null && !convertedString.isEmpty())
 					userToken.put("assignedFacilities", encryptDecryptUtil.encrypt(convertedString));
 			}
 		}

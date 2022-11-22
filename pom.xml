@@ -118,7 +118,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>emrsecurity</finalName>
+		<finalName>helpdesk</finalName>
 		<pluginManagement>
 			<plugins>
 				<plugin>

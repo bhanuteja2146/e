@@ -36,7 +36,7 @@ public class ProvFacPermissionMappingUseCaseImpl implements ProvFacPermissionMap
 		System.out.println("providerId " + providerId + " " + facilityId);
 
 		try {
-			if (providerId != null && !providerId.isBlank() && Long.parseLong(providerId) > 0
+			if (providerId != null && !providerId.isEmpty() && Long.parseLong(providerId) > 0
 					&& !CollectionUtils.isEmpty(facilityId)) {
 				List<Long> convertedId = facilityId.parallelStream().map(Long::parseLong).collect(Collectors.toList());
 				System.out.println("convertedId " + convertedId);
@@ -104,7 +104,7 @@ public class ProvFacPermissionMappingUseCaseImpl implements ProvFacPermissionMap
 	@Override
 	public Map<Long, List<Long>> getMappedFacilityListByStatus(String providerId, Status status, boolean resource) {
 		Map<Long, List<Long>> allFacilityList = new HashMap<>();
-		if (providerId != null && !providerId.isBlank()) {
+		if (providerId != null && !providerId.isEmpty()) {
 			System.out.println("providerId " + providerId + "" + providerId.length());
 //			Arrays.asList(providerId.split(",")).parallelStream().collect(Collectors.toMap(providerId,s-> provFacRepo.getAllFacilityMappedByProvider(Long.parseLong(s), Status.ACTIVE)));
 
@@ -113,7 +113,7 @@ public class ProvFacPermissionMappingUseCaseImpl implements ProvFacPermissionMap
 //					.collect(Collectors.toMap(key -> Long.parseLong(key.toString()), value -> value));
 
 			List<Long> collect = Arrays.asList(providerId.split(",")).parallelStream()
-					.filter(s -> s != null && !s.isBlank() && !"null".equalsIgnoreCase(s)).map(Long::parseLong)
+					.filter(s -> s != null && !s.isEmpty() && !"null".equalsIgnoreCase(s)).map(Long::parseLong)
 					.collect(Collectors.toList());
 			for (Long id : collect) {
 				List<ProviderFacilityPermssionMappingDomain> allFacilityMappedByProvider = provFacPermissionMappingDaoImpl
@@ -137,7 +137,7 @@ public class ProvFacPermissionMappingUseCaseImpl implements ProvFacPermissionMap
 	public Map<Long, List<ProviderFacilityPermssionMappingDomain>> getMappedProviderListByFacilityAndStatus(
 			String facilityId, Status status, String resource) {
 		Map<Long, List<ProviderFacilityPermssionMappingDomain>> allFacilityList = new HashMap<>();
-		if (facilityId != null && !facilityId.isBlank()) {
+		if (facilityId != null && !facilityId.isEmpty()) {
 			System.out.println("facility id " + facilityId);
 //			Arrays.asList(providerId.split(",")).parallelStream().collect(Collectors.toMap(providerId,s-> provFacRepo.getAllFacilityMappedByProvider(Long.parseLong(s), Status.ACTIVE)));
 
@@ -146,7 +146,7 @@ public class ProvFacPermissionMappingUseCaseImpl implements ProvFacPermissionMap
 //					.collect(Collectors.toMap(key -> Long.parseLong(key.toString()), value -> value));
 
 			List<Long> collect = Arrays.asList(facilityId.split(",")).parallelStream()
-					.filter(s -> s != null && !s.isBlank() && !"null".equalsIgnoreCase(s)).map(Long::parseLong)
+					.filter(s -> s != null && !s.isEmpty() && !"null".equalsIgnoreCase(s)).map(Long::parseLong)
 					.collect(Collectors.toList());
 			for (Long id : collect) {
 				if ("prov".equalsIgnoreCase(resource)) {
@@ -181,7 +181,7 @@ public class ProvFacPermissionMappingUseCaseImpl implements ProvFacPermissionMap
 	@Override
 	public Map<Long, List<String>> getMappedUserNameByFacility(String facilityId, Status status, String resource) {
 		Map<Long, List<String>> allFacilityList = new HashMap<>();
-		if (facilityId != null && !facilityId.isBlank()) {
+		if (facilityId != null && !facilityId.isEmpty()) {
 			System.out.println("facility id " + facilityId);
 //			Arrays.asList(providerId.split(",")).parallelStream().collect(Collectors.toMap(providerId,s-> provFacRepo.getAllFacilityMappedByProvider(Long.parseLong(s), Status.ACTIVE)));
 
@@ -190,7 +190,7 @@ public class ProvFacPermissionMappingUseCaseImpl implements ProvFacPermissionMap
 //					.collect(Collectors.toMap(key -> Long.parseLong(key.toString()), value -> value));
 
 			List<Long> collect = Arrays.asList(facilityId.split(",")).parallelStream()
-					.filter(s -> s != null && !s.isBlank() && !"null".equalsIgnoreCase(s)).map(Long::parseLong)
+					.filter(s -> s != null && !s.isEmpty() && !"null".equalsIgnoreCase(s)).map(Long::parseLong)
 					.collect(Collectors.toList());
 			for (Long id : collect) {
 				if ("prov".equalsIgnoreCase(resource)) {
@@ -199,7 +199,7 @@ public class ProvFacPermissionMappingUseCaseImpl implements ProvFacPermissionMap
 					if (!CollectionUtils.isEmpty(collect) && !allFacilityMappedByProvider.isEmpty()) {
 						allFacilityList.put(id,
 								allFacilityMappedByProvider.stream()
-										.filter(s -> s.getCreatedBy() != null && !s.getCreatedBy().isBlank()
+										.filter(s -> s.getCreatedBy() != null && !s.getCreatedBy().isEmpty()
 												&& !"null".equalsIgnoreCase(s.getCreatedBy()))
 										.map(s -> s.getUserName()).collect(Collectors.toList()));
 					}
@@ -209,7 +209,7 @@ public class ProvFacPermissionMappingUseCaseImpl implements ProvFacPermissionMap
 					if (!CollectionUtils.isEmpty(collect) && !allFacilityMappedByProvider.isEmpty()) {
 						allFacilityList.put(id,
 								allFacilityMappedByProvider.stream()
-										.filter(s -> s.getCreatedBy() != null && !s.getCreatedBy().isBlank()
+										.filter(s -> s.getCreatedBy() != null && !s.getCreatedBy().isEmpty()
 												&& !"null".equalsIgnoreCase(s.getCreatedBy()))
 										.map(s -> s.getUserName()).collect(Collectors.toList()));
 					}
@@ -219,7 +219,7 @@ public class ProvFacPermissionMappingUseCaseImpl implements ProvFacPermissionMap
 					if (!CollectionUtils.isEmpty(collect) && !allFacilityMappedByProvider.isEmpty()) {
 						allFacilityList.put(id,
 								allFacilityMappedByProvider.stream()
-										.filter(s -> s.getCreatedBy() != null && !s.getCreatedBy().isBlank()
+										.filter(s -> s.getCreatedBy() != null && !s.getCreatedBy().isEmpty()
 												&& !"null".equalsIgnoreCase(s.getCreatedBy()))
 										.map(s -> s.getUserName()).collect(Collectors.toList()));
 					}

@@ -12,7 +12,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 public class HepdeskApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(HepdeskApplication.class, args);
-		System.out.println("main");
+		System.out.println("main ");
 	}
 
 }
